@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Quicksand:wght@400;600&family=Sawarabi+Gothic&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/data/characters.js" defer></script>
+    <script src="js/data/scenario.js" defer></script>
+    <script src="js/data/loadingScreen.js" defer></script>
+    <script src="js/script.js" defer></script>
+    <title>myo's TRPG CSs</title>
+</head>
+<body>
+    <section id="loading">
+        <img src="img/metaCircleWhite.png" alt="">
+        <div>
+            <h2 id="loadingScreenTitle"></h2>
+            <p id="loadingScreenContents"></p>
+        </div>
+
+    </section>
+    <section id="mainContainer">
+        <div id="topElement">
+            <div id="rank">
+                <div>
+                    <h3>rank</h3>
+                    <h2>45</h2>
+                </div>
+            </div>
+            <div id="statusBar">
+                <div class="statusEXP">
+                    <h3>Exp.</h3>
+                    <span class="bar"><span class="exp"></span></span>
+                </div>
+                <div>
+                    <div class="statusEne statusBarCategory">
+                        <h3>Ene.</h3>
+                        <h4>10/120</h4>
+                    </div>
+                    <span class="bar"><span class="energy"></span></span>
+                </div>
+                <div>
+                    <div class="statusMon statusBarCategory">
+                        <h3>Mon.</h3><h4>5,176,251,569</h4>
+                    </div>
+                </div>
+                <div>
+                    <div class="statusGri statusBarCategory">
+                        <h3>Gri.</h3>
+                        <h4>155</h4>
+                    </div>
+                </div>
+            </div>
+            <div id="menu" class="button">
+                <div>
+                    <span class="material-symbols-outlined">menu</span>
+                </div>
+                <div>
+                    <a href="https://myo108.github.io/portal/"  target="_blank" rel="noreferrer noopener" id="home" class="button">
+                        <span class="material-symbols-outlined">
+                        home
+                        </span></a>
+                </div>
+            </div>
+            <div class="timeContainer">
+                <span id="year"></span>
+                <span>/</span>
+                <span id="month"></span>
+                <span>/</span>
+                <span id="day"></span>
+                <span>　</span>
+                <span id="hours"></span>
+                <span>:</span>
+                <span id="minutes"></span>
+                <span>:</span>
+                <span id="second"></span>
+            </div>
+        </div>
+        <div id="chara">
+            <div id="charaImg">
+                
+            </div>
+            <div class="charaDiaFrame">
+                <div id="charaName"></div>
+                <div id="charaDialog"></div>
+            </div>
+        </div>
+        <div class="eventSliderContainer">
+            <ul class="eventSlider">
+                <li><img src="img/scenario/kaimaho-banner.webp" alt=""></li>
+                <li><img src="img/scenario/niwashi-banner.webp" alt=""></li>
+                <li><img src="img/scenario/moonGifted-banner.webp" alt=""></li>
+            </ul>
+        </div>
+        <div id="mainMenuButton">
+            <li class="mainMenuButtonChild"><h1>リスト</h1></li>
+            <li class="mainMenuButtonChild"><h1>ガチャ</h1></li>
+            <li class="mainMenuButtonChild accentButton" id="exploreBtn"><h1>探索</h1></li>
+        </div>
+    </section>
+    <section class="explore">
+        <button class="back">
+            <div>
+                Back
+            </div>
+        </button>
+        <div id="clearedScenario">
+            <div id="scenarioList" data-explore-mouse-down-at="0" data-explore-prev-percentage="0">
+                <img src="img/scenario/kaimaho-list.webp" alt="かいぶつたちとマホラカルト" draggable="false" class="listedScenario" id="kaimahoListed" data-scenario-name="kaimaho">
+                <img src="img/scenario/doukyonin-list.webp" alt="同居人" draggable="false" class="listedScenario" id="doukyoninListed" data-scenario-name="doukyonin">
+                <img src="img/scenario/umikare-list.webp" alt="海も枯れるまで" draggable="false" class="listedScenario" id="umikareListed" data-scenario-name="umikare">
+                <img src="img/scenario/siren-list.webp" alt="サイレン清掃会社" draggable="false" class="listedScenario" id="sirenListed" data-scenario-name="siren">
+                <img src="img/scenario/IRAS-list.webp" alt="アイラスの双眼" draggable="false" class="listedScenario" id="irasListed" data-scenario-name="iras">
+                <img src="img/scenario/moonGifted-list.webp" alt="MOON GIFTED" draggable="false" class="listedScenario" id="moonGiftedListed" data-scenario-name="moonGifted">
+                <img src="img/scenario/ginrou-list.webp" alt="銀蝋と怪盗団" draggable="false" class="listedScenario" id="ginrouListed" data-scenario-name="ginrou">
+                <img src="img/scenario/niwashi-list.webp" alt="庭師は何を口遊む" draggable="false" class="listedScenario" id="niwashiListed" data-scenario-name="niwashi">
+            </div>
+
+            <div class="dialogBackground">
+            </div>
+
+            <dialog class="scenarioDialog">
+                <button class="closeDialog">◀</button>
+                <img src="" alt="" draggable="false" id="scenarioImg">
+                <div class="scenarioDes">
+                    <h4 id="clearedDate"></h4>
+                    <div class="titleLinkContainer"><h2 id="scenarioName"></h2><a href="" target="_blank" rel="noopener noreferrer" id="scenarioLink"><button id="site"></button></a></div>
+                    <h3 id="authorKP"></h3>
+                    <h4>通過PC: <span id="PCName"></span></h4>
+                    <div id="scenarioComment">
+                    </div>
+                </div>
+            </dialog>
+        </div>
+    </section>
+</body>
+</html>

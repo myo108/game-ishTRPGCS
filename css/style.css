@@ -1,0 +1,512 @@
+:root{
+    --dark-main:#0f1014;
+    --neutral-main:#585755;
+    --light-main:#fff;
+    --accent:#3aa1cc;
+    --main-gradient:linear-gradient(var(--neutral-main) 0, var(--light-main));
+    --sub-gradient:linear-gradient(var(--accent)0, var(--dark-main));
+    --transition:all .3s ease-in-out;
+}
+::selection{
+    background:#585755;
+    color:white;
+}
+*{
+    margin:0;
+    padding:0
+}
+html{
+    font-family: 'Quicksand',"Sawarabi Gothic",'Noto Sans JP', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background: black;
+}
+p{
+    line-height: 1.8em;
+    margin-block: 1em;
+}
+dialog[open] {
+    display: grid;
+}
+
+/* ----------loading---------- */
+
+    #loading{
+        position: absolute;
+        width: 1600px;
+        height: 900px;
+        background: black;
+        margin-inline: auto;
+        margin-block: auto;
+        overflow: hidden; 
+        top: 0;
+        z-index: 10000; 
+        color: var(--light-main);
+        display:none;
+    }
+    #loading>div{
+        position: relative;
+        top: 40%;
+        margin-inline-start: 5em;
+    }
+    #loading img{
+        position: absolute;
+        width: 150px;
+        right: 0;
+        bottom: 0;
+    }
+
+/* ----------toppage---------- */
+#mainContainer{
+    position: relative;
+    width: 1600px;
+    height: 900px;
+    background-image: url("/TRPGCS/img/pexels-alexandr-podvalny-9397560.jpg");
+    background-repeat: no-repeat;
+    margin-block: auto;
+    overflow: hidden;
+}
+    #topElement{
+        display: grid;
+        grid-template-areas: 
+        'rank . . . menuBtn'
+        'statusBar statusBar statusBar statusBar statusBar'
+        'time .  . . .';
+        position: relative;
+        top: 10px;
+        width: 90%;
+        color: var(--light-main);
+        margin-inline: auto;
+        z-index: 5;
+    }
+        #rank{
+            position: relative;;
+            grid-area: rank;
+            width: 125px;
+            height: 125px;
+            clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+            background: var(--light-main);
+            color: var(--dark-main);
+            z-index: 5;
+        }
+        #rank>div{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            text-align: center;
+            transform: translate(-50%,-50%);
+        }
+        #statusBar{
+            grid-area: statusBar;
+            position: absolute;
+            top: -110px;
+            left: 70px;
+            display: grid;
+            grid-template-areas: 'statusEXP statusEne statusMon statusGri';
+            grid-auto-columns: 1fr;
+            width: 80%;
+            height: 3em;
+            padding-inline: 3em;
+            background: var(--dark-main);
+        }
+            #statusBar>*{
+                margin-inline: 1em;
+                margin-block: auto;
+            }
+            #statusBar h4{
+                text-align: right;
+                margin-inline-end: 3em;
+            }
+            #statusBar>*>div{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                justify-content: space-evenly;
+            }
+            .statusEXP>*,.statusEne>*,.statusMon>*,.statusGri>*{
+                display: inline-block;
+                margin-inline: 1em;
+                margin-block: auto;
+            }
+            .statusEXP{
+                position: relative;
+                grid-area:statusEXP;
+                border-right: rgba(255, 255, 255, 0.4) 1px solid;
+            }
+            .statusEXP::before{
+                content: '';
+                position: absolute;
+                width: 55%;
+                height: 7px;
+                inset: 0;
+                top: 50%;
+                left: 33%;
+                background: rgba(255, 255, 255, 0.4);
+            }
+            .statusEXP::after{
+                content: '';
+                position: absolute;
+                width: 30%;
+                height: 7px;
+                inset: 0;
+                top: 50%;
+                left: 33%;
+                background: rgba(255, 255, 255, 0.8);
+            }
+            .statusEne{
+                grid-area:statusEne;
+                border-right: rgba(255, 255, 255, 0.4) 1px solid;
+            }
+            .statusMon{
+                grid-area:statusMon;
+                border-right: rgba(255, 255, 255, 0.4) 1px solid;
+            }
+            .statusGri{
+                grid-area:statusGri;
+                border-right: none;
+            }
+        #menu{
+            grid-area: menuBtn;
+        }
+        #menu div{
+            display: inline-block;
+            position: relative;
+            width: 75px;
+            height: 75px;
+            left: 200px;
+            background:var(--neutral-main);
+            clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+            cursor: pointer;
+        }
+        #menu div:hover{
+            background:var(--dark-main);
+            transition: var(--transition);
+        }
+        #menu>div span{
+            position: absolute;
+            color: var(--light-main);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        .timeContainer{
+            grid-area: time;
+
+            position: relative;
+            left: 135px;
+            top: -45px;
+            font-size: 1.2em;
+        }
+    #chara{
+        position: relative;
+        left: 5.6em;
+    }
+        #chara img{
+            position: absolute;
+            top: -70px;
+            z-index: 6;
+        }
+        .charaDiaFrame{
+            position: absolute;
+            max-width: 400px;
+            min-height: 250px;
+            top: 430px;
+            left: 53px;
+            font-size: 1.2em;
+            z-index: 7;
+        }
+            #charaName{
+                width: 50%;
+                height: 3em;
+                background: white;
+            }
+            #charaName h3{
+                position: relative;
+                top: 50%;
+                transform: translateY(-50%);
+                margin-inline-start: 2ch;
+                font-weight: 500;
+                color: var(--neutral-main);
+            }
+            #charaDialog{
+                min-width: 300px;
+                min-height:130px;
+                background: rgba(0,0,0,0.5);
+                color: white;
+                padding-inline: 2ch;
+                padding-block: 1em;
+            }
+    #mainMenuButton{
+        position: absolute;
+        transform: rotate(45deg);
+        display: grid;
+        grid-template-areas:
+            'arrange gacha '
+            '. explore ';
+        gap: 3.5em;
+        grid-auto-columns: max-content;
+        grid-auto-rows: max-content;
+        left: 65%;
+        top: 25%;
+        list-style: none;
+    }
+    #mainMenuButton::before{
+        content: '';
+        background: url(/TRPGCS/img/whiteWave10.png);
+        position: absolute;
+        width: 350%;
+        height: 700px;
+        transform: rotate(5deg);
+        top: 0%;
+        left: -150%;
+    }
+        .mainMenuButtonChild{
+            position: relative;
+            width: 180px;
+            height: 180px;
+            color: var(--light-main);
+            background: linear-gradient(135deg,var(--neutral-main) 50%, var(--light-main)100%);
+            background-size: 200%;
+            background-position: 50% 50%;
+            cursor: pointer;
+            transition: var(--transition);
+            
+        }
+        .mainMenuButtonChild:hover{
+            background-position: 75% 50%;
+        }
+        .mainMenuButtonChild:nth-child(1){
+            grid-area: arrange;
+        }
+        .mainMenuButtonChild:nth-child(2){
+            grid-area: gacha;
+        }
+        .mainMenuButtonChild:nth-child(3){
+            grid-area: explore;
+    }
+            .mainMenuButtonChild>*{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%) rotate(-45deg);
+            }
+            .mainMenuButtonChild>h1{
+                font-size: 1.7em;
+                font-weight: 500;
+
+            }
+        .accentButton{
+            background: linear-gradient(135deg, var(--accent)0, var(--dark-main)100%);
+            background-size: 200%;
+            background-position: 50% 50%;
+            outline: white solid 3px;
+            outline-offset: 0.5em;
+        }
+        .accentButton:hover{
+            outline-offset: -1em;
+        }
+
+    .eventSliderContainer{
+        position: relative;
+        left: 50%;
+        top: 56%;
+        width: 300px;
+        height: 150px;
+        clip-path: polygon(10% 0, 90% 0, 100% 15%, 100% 85%, 90% 100%, 10% 100%, 0 85%, 0 15%);
+        cursor: pointer;
+        z-index: 7;
+        transition: var(--transition);
+    }
+    .eventSliderContainer:hover{
+        filter: brightness(1.1);
+    }
+        .eventSlider li{
+            width: 300px;
+            height: 150px;
+            background: white;
+            list-style: none;
+        }
+        .eventSlider li img{
+            position: relative;
+            width: 100%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+
+/*----------探索----------*/
+
+    .explore{
+        position: absolute;
+        width: 1600px;
+        height: 900px;
+        background-image: url("/TRPGCS/img/pexels-alexandr-podvalny-9397560.jpg");
+        background-repeat: no-repeat;
+        margin-inline: auto;
+        margin-block: auto;
+        overflow: hidden; 
+        top: 0;
+        z-index: 11; 
+        display: none;
+        /* opacity: .5; */
+    }
+    .back{
+        position: relative;;
+        width: 90px;
+        height: 90px;
+        background: var(--neutral-main);
+        color: var(--light-main);
+        z-index: 5;
+        border: none;
+        left:80px;
+        top: 27px;
+        cursor: pointer;
+        transform: rotate(45deg);
+        outline: var(--accent) solid 3px;
+        outline-offset: -10px;
+        transition: var(--transition);
+    }
+    .back:hover{
+        background:var(--light-main) ;
+        color: var(--neutral-main);
+        outline-offset: 5px;
+    }
+    .back>div{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        text-align: center;
+        transform: translate(-50%,-50%) rotate(-45deg);
+    }
+
+    #scenarioList{
+        display: flex;
+        gap: 2em;
+        position: absolute;
+        left: 10%;
+        top: 50%;
+        transform: translate(-1.4%,-50%);
+        user-select:none; /* standard syntax */
+        -webkit-user-select:none; /* for Chrome、Safari */
+        -moz-user-select:none; /* for Mozilla、Firefox */
+        padding-block: 5em;
+    }
+    #scenarioList>img{
+        cursor: pointer;
+        filter: grayscale(.8) brightness(.9);
+        transition: var(--transition);
+    }
+    #scenarioList>img:hover{
+        filter:grayscale(0) brightness(1);
+    }
+    .dialogBackground{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 1600px;
+        height: 900px;
+        background: rgba(0,0,0,0.5);
+        z-index: 18;
+        display: none;
+    }
+    .scenarioDialog{
+        grid-template-areas: 
+        'closeDialog .'
+        'desImg scenarioDes';
+        position: relative;
+        gap: 2em;
+        width: 80ch;
+        background-color: #4c4b4be8;
+        padding-inline: 2em;
+        padding-block: 2em;
+        border-radius: 0 5em 0 0;
+        color: white;
+        border: none;
+        margin-inline: auto;
+        z-index: 19;
+        overflow: hidden;
+    }
+
+    #scenarioImg{
+        position: relative;
+        grid-area: desImg;
+        z-index: 1;
+    }
+    .scenarioDes{
+        grid-area: scenarioDes;
+    }
+    .scenarioDes button{
+        padding-block: .8em;
+        padding-inline: 1.5em;
+        border-radius: 5px;
+        border: none;
+        background: linear-gradient(90deg,var(--accent)0, var(--dark-main));
+        background-size: 200%;
+        background-position: 50% 50%;
+        color: var(--light-main);
+        cursor: pointer;
+        transition: var(--transition);
+    }
+    .scenarioDes button:hover{
+        background-position: 0% 50%;
+    }
+    .scenarioDes h2,.scenarioDes h3,.scenarioDes h4{
+        margin-block: .5em;
+        font-weight: 500;
+    }
+    #clearedDate{
+        background: white;
+    color: var(--neutral-main);
+    padding-block: 0.5em;
+    position: relative
+    }
+    #clearedDate::before{
+        content: '';
+        display: inline-block;
+        height: 36px;
+        width: 36px;
+        position: absolute;
+        top: 0;
+        left: -36px;
+        background: white;
+    }
+    #clearedDate::after{
+        content: '';
+        display: inline-block;
+        height: 36px;
+        width: 36px;
+        position: absolute;
+        top: 0;
+        right: -50px;
+        background: white;
+    }
+    #scenarioName{
+        display: inline-block;
+    }
+    .titleLinkContainer{
+        display: flex;
+    align-items: center;
+    gap: 1.5em;
+    }
+    #site{
+        margin-block: 0.75em;
+    }
+    #authorKP::after{
+        content:'(敬称略)';
+        font-size: .8em;
+        opacity: .7;
+        margin-inline-start: 1em;
+    }
+    .closeDialog{
+        top: -65px;
+        left: -50px;
+        position: absolute;
+        grid-area: closeDialog;
+        background: none;
+        border: none;
+        color: white;
+        width: 4em;
+        font-size: 2em;
+        height: 4em;
+        cursor: pointer;
+    }
