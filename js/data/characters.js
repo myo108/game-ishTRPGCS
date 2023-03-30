@@ -39,6 +39,11 @@ const characters ={
         dialog:'喉の調子OK、メイク道具OK、セリフOK……これでリハーサル大丈夫だろう。',
         image:'img/characters/toppage/oto.png',
     },
+    tomori:{
+        name:'佐藤灯',
+        dialog:'カフェで人間観察しよっか。',
+        image:'img/characters/toppage/tomori.png'
+    },
     honoka:{
         name:'貝渕帆夏',
         dialog:'今日も暇だね～時計改造しようかな！',
