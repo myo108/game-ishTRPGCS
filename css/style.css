@@ -62,7 +62,7 @@ dialog[open] {
     position: relative;
     width: 1600px;
     height: 900px;
-    background-image: url("/TRPGCS/img/pexels-alexandr-podvalny-9397560.jpg");
+    background-image: url("/game-ishTRPGCS/img/pexels-alexandr-podvalny-9397560.jpg");
     background-repeat: no-repeat;
     margin-block: auto;
     overflow: hidden;
@@ -252,7 +252,7 @@ dialog[open] {
     }
     #mainMenuButton::before{
         content: '';
-        background: url(/img/whiteWave10.png);
+        background: url(game-ishTRPGCS/img/whiteWave10.png);
         position: absolute;
         width: 350%;
         height: 700px;
