@@ -1,11 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+        <!--
+        ソースコードになんか特別なもの書いてないとおもう！多分！
+        -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Quicksand:wght@400;600&family=Sawarabi+Gothic&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;500&family=Noto+Sans+JP&family=Quicksand:wght@400;600&family=Sawarabi+Gothic&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
@@ -102,7 +105,7 @@
             </ul>
         </div>
         <div id="mainMenuButton">
-            <li class="mainMenuButtonChild"><h1>リスト</h1></li>
+            <li class="mainMenuButtonChild" id="listBtn"><h1>リスト</h1></li>
             <li class="mainMenuButtonChild"><h1>ガチャ</h1></li>
             <li class="mainMenuButtonChild accentButton" id="exploreBtn"><h1>探索</h1></li>
         </div>
@@ -114,13 +117,16 @@
             </div>
         </button>
         <div id="clearedScenario">
-            <div id="scenarioList" data-explore-mouse-down-at="0" data-explore-prev-percentage="0">
+            <div id="scenarioList" data-explore-mouse-down-at="0" data-explore-prev-percentage="0" data-explore-percentage="0">
                 <img src="img/scenario/kaimaho-list.webp" alt="かいぶつたちとマホラカルト" draggable="false" class="listedScenario" id="kaimahoListed" data-scenario-name="kaimaho">
                 <img src="img/scenario/doukyonin-list.webp" alt="同居人" draggable="false" class="listedScenario" id="doukyoninListed" data-scenario-name="doukyonin">
                 <img src="img/scenario/umikare-list.webp" alt="海も枯れるまで" draggable="false" class="listedScenario" id="umikareListed" data-scenario-name="umikare">
+                <img src="img/scenario/THG-list.webp" alt="The Hog Game" draggable="false" class="listedScenario" id="THGListed" data-scenario-name="THG">
                 <img src="img/scenario/siren-list.webp" alt="サイレン清掃会社" draggable="false" class="listedScenario" id="sirenListed" data-scenario-name="siren">
                 <img src="img/scenario/IRAS-list.webp" alt="アイラスの双眼" draggable="false" class="listedScenario" id="irasListed" data-scenario-name="iras">
                 <img src="img/scenario/moonGifted-list.webp" alt="MOON GIFTED" draggable="false" class="listedScenario" id="moonGiftedListed" data-scenario-name="moonGifted">
+                <img src="img/scenario/deshi-list.webp" alt="デウス・エクス・マキナは死んだ" draggable="false" class="listedScenario" id="deshiListed" data-scenario-name="deshi">
+                <img src="img/scenario/endebi-list.webp" alt="エンジェル・デビル・インプロパー" draggable="false" class="listedScenario" id="endebiListed" data-scenario-name="endebi">
                 <img src="img/scenario/ginrou-list.webp" alt="銀蝋と怪盗団" draggable="false" class="listedScenario" id="ginrouListed" data-scenario-name="ginrou">
                 <img src="img/scenario/niwashi-list.webp" alt="庭師は何を口遊む" draggable="false" class="listedScenario" id="niwashiListed" data-scenario-name="niwashi">
             </div>
@@ -139,6 +145,136 @@
                     <div id="scenarioComment">
                     </div>
                 </div>
+            </dialog>
+        </div>
+    </section>
+    <section class="characters">
+        <button class="back">
+            <div>
+                Back
+            </div>
+        </button>
+        <div id="myosPC">
+            <div id="PCList" data-character-mouse-down-at="0" data-character-prev-percentage="0" data-character-percentage="0">
+                <div style="background: #699593aa;" class="listedChara" data-character-name="shachen">
+                    <img src="img/characters/list/shachen.webp" alt="" draggable="false">
+                    <div class="name-system">
+                        <h3>CoC</h3>
+                        <h2>Chen Shia</h2>
+                    </div>
+                </div>
+                <div style="background: #84643eaa;" class="listedChara" data-character-name="kaimi">
+                    <img src="img/characters/list/kaimi.webp" alt="" draggable="false">
+                    <div class="name-system">
+                        <h3>CoC</h3>
+                        <h2>Kaimi Oonishi</h2>
+                    </div>
+                </div>
+                <div style="background: #3c3240aa;" class="listedChara" data-character-name="nozomu">
+                    <img src="img/characters/list/nozomu.webp" alt="" draggable="false">
+                    <div class="name-system">
+                        <h3>CoC</h3>
+                        <h2>Nozomu Ichijiku</h2>
+                    </div>
+                </div>
+                <div style="background: #2b3c3baa;" class="listedChara" data-character-name="aya">
+                    <img src="img/characters/list/aya.webp" alt="" draggable="false">
+                    <div class="name-system">
+                        <h3>CoC</h3>
+                        <h2>Aya Kashiwaba</h2>
+                    </div>
+                </div>
+                <div style="background: #666e68aa;" class="listedChara" data-character-name="suzu">
+                    <img src="img/characters/list/suzu.webp" alt="" draggable="false">
+                    <div class="name-system">
+                        <h3>CoC</h3>
+                        <h2>Suzuto Yoneo</h2>
+                    </div>
+                </div>
+                <div style="background: #5e9795aa;" class="listedChara" data-character-name="gen">
+                    <img src="img/characters/list/gen.webp" alt="" draggable="false">
+                    <div class="name-system">
+                        <h3>CoC</h3>
+                        <h2>Gen Yodonawa</h2>
+                    </div>
+                </div>
+                <div style="background: #402d25aa;" class="listedChara" data-character-name="alex">
+                    <img src="img/characters/list/alex.webp" alt="" draggable="false">
+                    <div class="name-system">
+                        <h3>CoC</h3>
+                        <h2>Alex Edwards</h2>
+                    </div>
+                </div>
+                <div style="background: #466474aa;" class="listedChara" data-character-name="ryou">
+                    <img src="img/characters/list/ryou.webp" alt="" draggable="false">
+                    <div class="name-system">
+                        <h3>CoC</h3>
+                        <h2>Ryoh Meguro</h2>
+                    </div>
+                </div>
+                <div style="background: #021a62aa;" class="listedChara" data-character-name="megumi">
+                    <img src="img/characters/list/megumi.webp" alt="" draggable="false">
+                    <div class="name-system">
+                        <h3>CoC</h3>
+                        <h2>Megumi Takanashi</h2>
+                    </div>
+                </div>
+                <div style="background: #332e3caa;" class="listedChara" data-character-name="yuito">
+                    <img src="img/characters/list/yuito.webp" alt="" draggable="false">
+                    <div class="name-system">
+                        <h3>CoC</h3>
+                        <h2>Yuito Izumi</h2>
+                    </div>
+                </div>
+                <div style="background: #45171aaa;" class="listedChara" data-character-name="oto">
+                    <img src="img/characters/list/oto.webp" alt="" draggable="false">
+                    <div class="name-system">
+                        <h3>CoC</h3>
+                        <h2>Oto Shirahase</h2>
+                    </div>
+                </div>
+                <div style="background: #748181aa;" class="listedChara" data-character-name="tomori">
+                    <img src="img/characters/list/tomori.webp" alt="" draggable="false">
+                    <div class="name-system">
+                        <h3>CoC</h3>
+                        <h2>Tomori Satoh</h2>
+                    </div>
+                </div>
+                <div style="background: #9f7874aa;" class="listedChara" data-character-name="honoka">
+                    <img src="img/characters/list/honoka.webp" alt="" draggable="false">
+                    <div class="name-system">
+                        <h3>CoC</h3>
+                        <h2>Honoka Kaibuchi</h2>
+                    </div>
+                </div>
+                <div style="background: #735a5aaa;" class="listedChara" data-character-name="haru">
+                    <img src="img/characters/list/haru.webp" alt="" draggable="false">
+                    <div class="name-system">
+                        <h3>CoC</h3>
+                        <h2>Haru Uzuki</h2>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="dialogBackground">
+            </div>
+
+            <dialog class="characterDialog">
+                <button class="closeDialog">◀</button>
+                <img src="" alt="" draggable="false" id="characterListImg">
+                <div class="characterDes">
+                    <h2 id="characterListName"></h2>
+                    <h3><span id="characterAge"></span>歳 | <span id="characterJob"></span></h3>
+                    <p id="characterStatistic"></p>
+                    <div id="characterComment">
+                    </div>
+                    <button type="button" class="collapsible">
+                        通過シナリオ
+                    </button>
+                    <div class="collapsibleContent">
+                    </div>
+                    </div>  
             </dialog>
         </div>
     </section>

@@ -21,7 +21,7 @@ function topPageRandomCharacter(){
         obj => Object.keys(obj)[(Math.random() * Object.keys(obj).length) | 0];
     const topPageCharacter= characters[randomCharacter(characters)]
 
-        document.getElementById('charaImg').innerHTML= '<img src="' + topPageCharacter.image +'" width="800px" draggable="false">'
+        document.getElementById('charaImg').innerHTML= '<img src="' + topPageCharacter.topPageImage +'" width="800px" draggable="false">'
         document.getElementById('charaName').innerHTML='<h3>' + topPageCharacter.name + '</h3>';
         document.getElementById('charaDialog').innerHTML='<p>'+ topPageCharacter.dialog + '</p>'
 }
@@ -30,11 +30,10 @@ topPageRandomCharacter();
 function randomLoadingPage(){
     const random = 
     obj => Object.keys(obj)[(Math.random() * Object.keys(obj).length) | 0];
-const loadingPage= loading[random(loading)]
+    const loadingPage= loading[random(loading)]
 
     document.getElementById('loadingScreenTitle').innerHTML=loadingPage.title;
     document.getElementById('loadingScreenContents').innerHTML=loadingPage.contents;
-
 }
 
 $('#exploreBtn').click(function(){
@@ -52,8 +51,27 @@ $('.explore .back').click(function(){
     $('.explore').delay(randomLoadingTime).fadeOut();
     $('#loading').delay(randomLoadingTime).fadeOut();
     topPageRandomCharacter();
+})
+
+
+$('#listBtn').click(function(){
+    randomLoadingPage()
+    const randomLoadingTime=Math.floor(Math.random() * 5000) + 1000
+    $('#loading').fadeIn();
+    $('.characters').delay(randomLoadingTime).fadeIn();
+    $('#loading').delay(randomLoadingTime).fadeOut();
 
 })
+$('.characters .back').click(function(){
+    randomLoadingPage()
+    const randomLoadingTime=Math.floor(Math.random() * 5000) + 1000
+    $('#loading').fadeIn();
+    $('.characters').delay(randomLoadingTime).fadeOut();
+    $('#loading').delay(randomLoadingTime).fadeOut();
+    topPageRandomCharacter();
+})
+
+
 var slider = tns({
     container: '.eventSlider',
     items: 1,
@@ -68,47 +86,102 @@ var slider = tns({
 });
 
 const exploreTrack = document.getElementById('scenarioList');
+const exploreHandleOnDown = e =>{
+    exploreTrack.dataset.exploreMouseDownAt=e.clientX;
+}
+const exploreHandleOnUp = () =>{
+    exploreTrack.dataset.exploreMouseDownAt='0';
+    exploreTrack.dataset.explorePrevPercentage=exploreTrack.dataset.explorePercentage;
+}
+const exploreHandleOnMove = e =>{
+    if (exploreTrack.dataset.exploreMouseDownAt==='0') return;
+    const mouseDelta =parseFloat(exploreTrack.dataset.exploreMouseDownAt)-e.clientX;
+    const maxDelta=window.innerWidth/0.75;
 
-    exploreTrack.onpointerdown = e =>{
-        exploreTrack.dataset.exploreMouseDownAt=e.clientX;
-    }
-    
-    exploreTrack.onpointermove = e =>{
-        if (exploreTrack.dataset.exploreMouseDownAt==='0') return;
+    const explorePercentage = (mouseDelta/maxDelta)*-100;
+    const newPercentageTemp =parseFloat(exploreTrack.dataset.explorePrevPercentage)+explorePercentage;
+    const newExplorePercentage=Math.max(Math.min(newPercentageTemp,-1),-62.5);
+    exploreTrack.dataset.explorePercentage = newExplorePercentage;
 
-        const mouseDelta =parseFloat(exploreTrack.dataset.exploreMouseDownAt)-e.clientX;
-        const maxDelta=window.innerWidth/1.5;
+    exploreTrack.style.transform =`translate(${newExplorePercentage}%,-50%)`
+}
+exploreTrack.onmousedown = e => exploreHandleOnDown(e);
+exploreTrack.ontouchstart = e => exploreHandleOnDown(e.touches[0]);
+exploreTrack.onmouseup = e => exploreHandleOnUp(e);
+exploreTrack.ontouchend = e => exploreHandleOnUp(e.touches[0]);
+exploreTrack.onmousemove = e => exploreHandleOnMove(e);
+exploreTrack.ontouchmove = e => exploreHandleOnMove(e.touches[0]);
 
-        const percentage = (mouseDelta/maxDelta)*-100;
-        const newPercentageTemp =parseFloat(exploreTrack.dataset.explorePrevPercentage)+percentage;
-        const newPercentage=Math.max(Math.min(newPercentageTemp,-1.4),-50);
-        exploreTrack.dataset.percentage = newPercentage;
+const characterTrack = document.getElementById('PCList');
+const characterHandleOnDown = e =>{
+    characterTrack.dataset.characterMouseDownAt=e.clientX;
+}
+const characterHandleOnUp = () =>{
+    characterTrack.dataset.characterMouseDownAt='0'
+    characterTrack.dataset.characterPrevPercentage=characterTrack.dataset.characterPercentage
+}
+const characterHandleOnMove = e =>{
+    if (characterTrack.dataset.characterMouseDownAt==='0') return;
+    const mouseDelta =parseFloat(characterTrack.dataset.characterMouseDownAt)-e.clientX;
+    const maxDelta=window.innerWidth/0.75;
 
-        exploreTrack.style.transform =`translate(${newPercentage}%,-50%)`
-    }
-    exploreTrack.onpointerup = () =>{
-        exploreTrack.dataset.exploreMouseDownAt='0'
-        exploreTrack.dataset.explorePrevPercentage=exploreTrack.dataset.percentage
-    }
+    const characterPercentage = (mouseDelta/maxDelta)*-100;
+    const newcharacterPercentageTemp =parseFloat(characterTrack.dataset.characterPrevPercentage)+characterPercentage;
+    const newcharacterPercentage=Math.max(Math.min(newcharacterPercentageTemp,-1),-66.5);
+    characterTrack.dataset.characterPercentage = newcharacterPercentage;
 
-    document.querySelectorAll('.listedScenario').forEach((img)=>{
-        img.addEventListener('click',(e)=>{
-            $('.dialogBackground').fadeIn();
-            $('.scenarioDialog').attr('open','open');
-            const selectScenario =clearedScenario[e.currentTarget.dataset.scenarioName]
-            document.getElementById('scenarioImg').src=selectScenario.scenarioImg;
-            document.getElementById('scenarioImg').alt=selectScenario.title;
-            document.getElementById('scenarioName').innerHTML=selectScenario.title;
-            document.getElementById('authorKP').innerHTML=selectScenario.authorKeeper;
-            document.getElementById('scenarioLink').setAttribute('href',selectScenario.scenarioLink);
-            document.getElementById('site').innerHTML=selectScenario.site;
-            document.getElementById('clearedDate').innerHTML=selectScenario.date;
-            document.getElementById('PCName').innerHTML=selectScenario.PC;
-            document.getElementById('scenarioComment').innerHTML=selectScenario.comment
-            
-        })
+    characterTrack.style.transform =`translate(${newcharacterPercentage}%,-50%)`
+}
+characterTrack.onmousedown = e => characterHandleOnDown(e);
+characterTrack.ontouchstart = e => characterHandleOnDown(e.touches[0]);
+characterTrack.onmouseup = e => characterHandleOnUp(e);
+characterTrack.ontouchend = e => characterHandleOnUp(e.touches[0]);
+characterTrack.onmousemove = e => characterHandleOnMove(e);
+characterTrack.ontouchmove = e => characterHandleOnMove(e.touches[0]);
+
+document.querySelectorAll('.listedScenario').forEach((img)=>{
+    img.addEventListener('click',(e)=>{
+        $('.dialogBackground').fadeIn();
+        $('.scenarioDialog').attr('open','open');
+        const selectScenario =clearedScenario[e.currentTarget.dataset.scenarioName]
+        document.getElementById('scenarioImg').src=selectScenario.scenarioImg;
+        document.getElementById('scenarioImg').alt=selectScenario.title;
+        document.getElementById('scenarioName').innerHTML=selectScenario.title;
+        document.getElementById('authorKP').innerHTML=selectScenario.authorKeeper;
+        document.getElementById('scenarioLink').setAttribute('href',selectScenario.scenarioLink);
+        document.getElementById('site').innerHTML=selectScenario.site;
+        document.getElementById('clearedDate').innerHTML=selectScenario.date;
+        document.getElementById('PCName').innerHTML=selectScenario.PC;
+        document.getElementById('scenarioComment').innerHTML=selectScenario.comment
+        
     })
+})
+
+document.querySelectorAll('.listedChara').forEach((div)=>{
+    div.addEventListener('click',(e)=>{
+        console.log('clicked');
+        $('.dialogBackground').fadeIn();
+        $('.characterDialog').attr('open','open');
+        const selectChara =characters[e.currentTarget.dataset.characterName]
+        document.getElementById('characterListImg').src=selectChara.fullImage;
+        document.getElementById('characterListImg').alt=selectChara.name;
+        document.getElementById('characterListName').innerHTML='<ruby><rb>'+selectChara.name+'</rb><rp>(</rp><rt>'+selectChara.ruby+'</rt><rp>)</rp></ruby>';
+        document.getElementById('characterAge').innerHTML=selectChara.age;
+        document.getElementById('characterJob').innerHTML=selectChara.job;
+        document.getElementById('characterComment').innerHTML=selectChara.comment;
+        document.getElementById('characterStatistic').innerHTML='STR '+selectChara.STR+' | CON '+selectChara.CON+' | POW '+selectChara.POW+' | DEX '+selectChara.DEX+' <br> APP '+selectChara.APP+' | SIZ '+selectChara.SIZ+' | INT '+selectChara.INT+' | EDU '+selectChara.EDU;
+        document.querySelector('.collapsibleContent').innerHTML=selectChara.scenario
+    })
+})
+
+$('.collapsible').on('click', function() {
+	$(".collapsibleContent").slideToggle();
+	$(this).toggleClass('activatedCollapsible');
+});
+
+
 $('.closeDialog').click(function(){
     $('.dialogBackground').fadeOut();
-    $(this).parent().removeAttr('open','open')
+    $(this).parent().removeAttr('open','open');
+	$(".collapsibleContent").slideUp();
 })

@@ -11,6 +11,28 @@ const clearedScenario={
         '<p>昔CoCの他のシナリオもinSANeとかエモクロアとかもやったけど、このシナリオやってからずっとﾀﾞﾝｼﾝｸﾞしてた。詳しい事は全部現未×なので言えません。</p>'+
         '<p>多分人生で一番狂ったシナリオと思う、狂ったって言うか今も狂ってる。</p>'
     },
+    raise:{
+        scenarioImg:'img/scenario/raise-list.webp',
+        title:'来世で会おう',
+        authorKeeper:'作者 はちこ | KP ゆた',
+        scenarioLink:'https://86329njkh.booth.pm/items/3134820',
+        site:'Booth',
+        PC:'九望(HO2 魔王)',
+        date:'2021/08/05',
+        comment:'<p>キャラデザ楽しかった！！！</p>'+
+        '<p>相方の勇者めっちゃかわいい😊命……守らなきゃ……</p>'+
+        '<p>うちの魔王現世ではふわっふわのふわっふわだから急遽勇者の性格の方向性変更になったらしいのはマジで悪かった。</p>'
+    },
+    bakuhatuenjou:{
+        scenarioImg:'img/scenario/bakuhatuenjou-list.webp',
+        title:'出社したら会社が炎上爆発してた',
+        authorKeeper:'作者 白匣 | KP Reign',
+        scenarioLink:'https://shiroba.booth.pm/items/790388',
+        site:'Booth',
+        PC:'柏葉彩',
+        date:'2021/09/01~2021/09/08',
+        comment:'<p>「「はぁ……エオルゼアに帰りたい」」</p><p>ずっとエオルゼアに帰りたいって言ってるサラリーマン二人が奮闘しました！</p><p>あの後多分光と闇のクリスタル味からあげくん食べて肥える力貯めるのに頑張ってると思う</p>'
+    },
     doukyonin:{
         scenarioImg:'img/scenario/doukyonin-list.webp',
         title:'同居人',
@@ -23,7 +45,8 @@ const clearedScenario={
         '<p>グロで有名なシナリオなのでずっと警戒してましたが案外いけました。</p>'+
         '<p>録音何回聞き返してもPL達が冷静すぎて面白かった（ﾄﾞﾝﾄﾞﾝﾊﾟﾌﾊﾟﾌ）</p>'+
         '<p>同卓PCのクソデカ感情摂取しまして今もスルメを食べてる気分です（？）</p>'
-    },umikare:{
+    },
+    umikare:{
         scenarioImg:'img/scenario/umikare-list.webp',
         title:'海も枯れるまで',
         authorKeeper:'作者 ねこずし卓 | KP 風義',
@@ -34,6 +57,16 @@ const clearedScenario={
         comment:
         '<p>海枯れで言いたい事めっちゃあるけど全部現未×</p>'+
         '<p>いまになってもたまに突然同卓PLに刺されるのでいつもﾄﾞｷﾄﾞｷしています。</p>'
+    },
+    THG:{
+        scenarioImg:'img/scenario/THG-list.webp',
+        title:'THE HOG GAME',
+        authorKeeper:'作者 トロ川',
+        scenarioLink:'https://river1060.booth.pm/items/2558529',
+        site:'Booth',
+        PC:'Alex Edwards(KPC)',
+        date:'2021/11/15',
+        comment:'<p>法医学者と言語学者のコンビでいきました。</p><p>すっごくそういうドラマに出てきそうな組み合わせだね！生きてる人間に聞く言語学者と、死んでる人間に聞く法医学者。This is ロマン。</p><p>相方かわいいねｴﾍﾍ、ダイスで事故るのはダイスの女神がタップダンスしてるなあと思いました。</p>'
     },
     siren:{
         scenarioImg:'img/scenario/siren-list.webp',
@@ -46,7 +79,8 @@ const clearedScenario={
         comment:'<p>偶造神環シリーズはサイレン（いまここ）→アイラス→ムンギフ→銀蝋の順番で通った。</p>'+
         '<p>はじめての偶造神環！恐らくか通算二回目の4PL秘匿ありシナリオですね。秘匿提出してまさかのKP様がSS書いてしばらく困惑した記憶がありました。それ読んでクソデカ感情抱える所だった、危ない危ない。</p>'+
         '<p>結果的にﾀﾞﾝｼﾝｸﾞ状態手前に行きましたけど理性がギリギリそれを止めた、偉い。</p>'
-    },iras:{
+    },
+    iras:{
         scenarioImg:'img/scenario/IRAS-list.webp',
         title:'アイラスの双眼',
         authorKeeper:'作者 あんどう本舗 | KP 十文字',
@@ -69,10 +103,40 @@ const clearedScenario={
         comment:'<p>偶造神環シリーズはサイレン→アイラス→ムンギフ（いまここ）→銀蝋の順番で通った。マジでこの世界観いいなぁと思いました、あんどうさんユニバース（あんどうさんユニバース）はいいぞ。</p>'+
         '<p>未だにあれやこれ思い出すと泣きそうになるから多分そこそこ傷残されました。</p>'
     },
+    deshi:{
+        scenarioImg:'img/scenario/deshi-list.webp',
+        title:'デウス・エクス・マキナは<br>死んだ',
+        authorKeeper:'作者 茶々丸 | KP 十文字',
+        scenarioLink:'https://matumaru1232.booth.pm/items/1371817',
+        site:'Booth',
+        PC:'佐藤灯 (HO2 ヒト)',
+        date:'2022/04/01',
+        comment:'<p>なにも言ってもネタバレに踏みそう。</p><p>いろんな考え方して試行錯誤した気がする。相方がでけぇ幼女（でけぇ幼女）、かわいい。ゴネチケの代償面白くてこれからの十文字さんの卓でのゴネチケの代償楽しみにしております。</p>'
+    },
+    endebi:{
+        scenarioImg:'img/scenario/endebi-list.webp',
+        title:'エンジェル・デビル・<br>インプロパー',
+        authorKeeper:'作者 popo | KP ゆた',
+        scenarioLink:'https://organtrade.booth.pm/items/2249739',
+        site:'Booth',
+        PC:'白波瀬緒翔 (HO2 悪魔)',
+        date:'2022/04/21',
+        comment:'<p>>>>クソデカ感情になりかけたなにかを察知<<<</p><p>うちの子がミュージカル役者で天使がメイクアップアーティストでめっちゃ噛みしめた（いまでも噛みしめてる）</p><p>二度と悪魔差分描かないぞ。<p/>'
+    },
+    sumakira:{
+        scenarioImg:'img/scenario/sumakira-list.webp',
+        title:'SMILE KILLER',
+        authorKeeper:'作者 ちるん | KP パン粉',
+        scenarioLink:'https://tirunnotiruya.booth.pm/items/3450456',
+        site:'Booth',
+        PC:'貝渕帆夏',
+        date:'2022/06/04~2022/06/05',
+        comment:'<p></p>'
+    },
     ginrou:{
         scenarioImg:'img/scenario/ginrou-list.webp',
         title:'銀蠟と怪盗団',
-        authorKeeper:'作者 あんどう本舗様 | KP 十文字',
+        authorKeeper:'作者 あんどう本舗 | KP 十文字',
         scenarioLink:'https://tamagodx1414.booth.pm/items/3305563',
         site:'Booth',
         PC:'目黒稜(サイレンHO2継続)',

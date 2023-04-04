@@ -62,7 +62,7 @@ dialog[open] {
     position: relative;
     width: 1600px;
     height: 900px;
-    background-image: url("/game-ishTRPGCS/img/pexels-alexandr-podvalny-9397560.jpg");
+    background-image: url("/game-ishTRPGCS/img/background.webp");
     background-repeat: no-repeat;
     margin-block: auto;
     overflow: hidden;
@@ -280,6 +280,8 @@ dialog[open] {
         }
         .mainMenuButtonChild:nth-child(2){
             grid-area: gacha;
+            cursor: default;
+            background-position: 50% 50%;
         }
         .mainMenuButtonChild:nth-child(3){
             grid-area: explore;
@@ -336,11 +338,11 @@ dialog[open] {
 
 /*----------探索----------*/
 
-    .explore{
+    .explore,.characters{
         position: absolute;
         width: 1600px;
         height: 900px;
-        background-image: url("/game-ishTRPGCS/img/pexels-alexandr-podvalny-9397560.jpg");
+        background-image: url("/game-ishTRPGCS/img/background.webp");
         background-repeat: no-repeat;
         margin-inline: auto;
         margin-block: auto;
@@ -379,7 +381,7 @@ dialog[open] {
         transform: translate(-50%,-50%) rotate(-45deg);
     }
 
-    #scenarioList{
+    #scenarioList,#PCList{
         display: flex;
         gap: 2em;
         position: absolute;
@@ -389,7 +391,7 @@ dialog[open] {
         user-select:none; /* standard syntax */
         -webkit-user-select:none; /* for Chrome、Safari */
         -moz-user-select:none; /* for Mozilla、Firefox */
-        padding-block: 5em;
+        padding-block: 10em;
     }
     #scenarioList>img{
         cursor: pointer;
@@ -509,4 +511,119 @@ dialog[open] {
         font-size: 2em;
         height: 4em;
         cursor: pointer;
+    }
+
+    .characters{
+        z-index: 21;
+    }
+
+    #PCList>div{
+        position: relative;
+        display: flex;
+        gap: 0;
+        outline: #ffffff00 2px solid ;
+        border-radius: 5px;
+        transition: var(--transition);
+        overflow: hidden;
+    }
+    #PCList>div:hover{
+        position: relative;
+        display: flex;
+        gap: 0;
+        outline: #ffffff66 2px solid ;
+        outline-offset: -1.5em;
+        transition: var(--transition);
+        cursor: pointer;
+    }
+    #PCList>div>img{
+        z-index: 22;
+    }
+    .name-system{
+        position: absolute;
+        bottom: 0;
+        display: inline-block;
+        color: white;
+        left: 1em;
+        text-shadow: 2px 3px 8px #00000066;
+        font-weight: 500;
+        z-index: 23;
+    }
+    .name-system h2{
+        font-size: 2.5em;
+        
+    }
+    .characterDialog{
+        grid-template-areas: 
+        'closeDialog .'
+        'fullCharaImg characterDes';
+        position: relative;
+        gap: 2em;
+        width: 80ch;
+        background-color: #4c4b4be8;
+        padding-inline: 2em;
+        padding-block: 2em;
+        border-radius: 0 5em 0 0;
+        color: white;
+        border: none;
+        margin-inline: auto;
+        z-index: 29;
+        overflow: hidden;
+    }
+    #characterListImg{
+        grid-area: fullCharaImg;
+    }
+    .characterDes{
+        grid-area: characterDes;
+    }
+    .characterDes h2,.characterDes h3{
+        font-weight: 500;
+    }
+
+    .collapsible {
+        background:linear-gradient(90deg,#eee 0 , transparent 100%);
+        background-size: 200%;
+        background-position: 50% 50%;
+        color: #444;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+        transition: var(--transition);
+    }
+    
+    .activatedCollapsible, .collapsible:hover {
+        background-position: 0% 50%;
+    }
+    .collapsibleContent {
+        display: none;
+        overflow: hidden;
+        background-color: var(--neutral-main);
+        padding-inline: 2em;
+        padding-block: 1em .5em;
+        display: none;
+        max-height: 200px;
+        overflow-y: scroll;
+    }
+    
+    .collapsibleContent ul {
+        list-style-type: none;
+    }
+    .collapsibleContent li {
+        margin-block-end: 10px;
+    }
+    .collapsibleContent::-webkit-scrollbar{
+        width: 0.5em;
+    }
+    .collapsibleContent::-webkit-scrollbar-track{
+        background: #ffffff11;
+    }
+    .collapsibleContent::-webkit-scrollbar-thumb{
+        margin: 5px;
+        background: #ffffff11;
+    }
+    .collapsibleContent::-webkit-scrollbar-thumb:hover{
+        background: #968f8fd0;
     }
