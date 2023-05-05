@@ -270,6 +270,7 @@ dialog[open] {
             background-position: 50% 50%;
             cursor: pointer;
             transition: var(--transition);
+            border: 0;
             
         }
         .mainMenuButtonChild:hover{
@@ -304,7 +305,7 @@ dialog[open] {
             outline: white solid 3px;
             outline-offset: 0.5em;
         }
-        .accentButton:hover{
+        .accentButton:hover,.accentButton:focus{
             outline-offset: -1em;
         }
 
