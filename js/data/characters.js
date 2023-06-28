@@ -240,7 +240,7 @@ const characters ={
         topPageImage:'img/characters/toppage/yuito.webp',
         fullImage:'img/characters/full/yuito.webp',
         comment:'<p>人と喋るとき敬語を使う事が多いが、プライベートでは普通に口調荒め。目つきが悪すぎて子供泣かせる。<br>めっちゃ酒強い。</p>',
-        scenario:'<ul><li>MOON GIFTED</li><li>ジャルダン・マルスより、</li><li>楽園藪谷合戦城</li><li>HO1の達人</li></ul>'
+        scenario:'<ul><li>MOON GIFTED</li><li>ジャルダン・マルスより、</li><li>楽園藪谷合戦城</li><li>HO1の達人</li><li>ワンルーム・ディスコン</li></ul>'
     },
     oto:{
         name:'白波瀬緒翔',
