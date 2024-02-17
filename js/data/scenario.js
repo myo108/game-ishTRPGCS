@@ -147,12 +147,73 @@ const clearedScenario={
     niwashi:{
         scenarioImg:'img/scenario/niwashi-list.webp',
         title:'庭師は何を口遊む',
-        authorKeeper:'作者 USB | KP パン粉 | SKP れ',
+        authorKeeper:'作者 USB | KP パン粉 | SKP れ！',
         scenarioLink:'https://www.pixiv.net/novel/show.php?id=9232553',
         site:'Pixiv',
         PC:'卯月榛(HO1 零課チーフ)',
         date:'2022/12/26~2022/12/30',
         comment:'<p>通ってる時ずっと泣いてた記憶がある。KPとSKPによる殺意を感じましたね、BIG LOVE、ありがとう。</p>'+
         '<p>ボイセなので一応録画録音はしてましたが、エピローグの時めっちゃ声震えてましたね。感情抑えられなかっただろうね、つらい。</p>'
+    },
+    marebito:{
+        scenarioImg:'img/scenario/marebito-list.webp',
+        title:'まれびとこぞりて',
+        authorKeeper:'作者 文町 | KP ゆた',
+        scenarioLink:'https://candle-c.booth.pm/items/1547540',
+        site:'Booth',
+        PC:'御子柴巧',
+        date:'2023/07/05',
+        comment:'自分が謎解きに全然役立てなかった悲しみを噛みしめてる。'
+    },
+    kushikushi:{
+        scenarioImg:'img/scenario/kushikushi-list.webp',
+        title:'野狗子と薬師',
+        authorKeeper:'作者 popo | KP 十文字',
+        scenarioLink:'https://organtrade.booth.pm/items/2709518',
+        site:'Booth',
+        PC:'鳶(HO2 薬師)',
+        date:'2023/09/01~2023/11/19',
+        comment:'<p>初めての長期卓かも！？くしくしの風景美しくて最高でした。ありがとう作者さん、ありがとう十文字さん、ありがとうゆたさん。</p>'+
+        '<p>本当にいい旅だった。映画だった。あと俺の野狗子はこんなにも可愛い、ラブ。</p>'
+    },
+    rurupa:{
+        scenarioImg:'img/scenario/rurupa-list.webp',
+        title:'口渇ルルパ',
+        authorKeeper:'作者 志楼 | KP れ！',
+        scenarioLink:'https://kailow.booth.pm/items/2576469',
+        site:'Booth',
+        PC:'リア(HO2 ナイフ)',
+        date:'2023/09/09~2023/09/19',
+        comment:'<p>途中で泣いたのを必死に隠してたけど多分無理だった。ダイスの出目が怖すぎた～～～でも奇跡的に合う場所もあるのってなに～～～～</p>'
+    },
+    GMA:{
+        scenarioImg:'img/scenario/GMA-list.webp',
+        title:'Good morning, ALL',
+        authorKeeper:'作者 あお | KP 朔子',
+        scenarioLink:'https://kimeall.booth.pm/items/2976456',
+        site:'Booth',
+        PC:'羽生優輝(HO重病人)',
+        date:'2023/12/11~2023/12/14',
+        comment:'<p>冒頭でジェットコースターしてるの絶対忘れないからな。一生ｹﾞﾎｺﾞﾎしてた。終盤あたりずっと泣いてる、滅んだとしても美しくてやさしい世界だった。</p>'
+    },
+    idyaku:{
+        scenarioImg:'img/scenario/idyaku-list.webp',
+        title:'イドラの約束',
+        authorKeeper:'作者 あんどう本舗 | KP 十文字',
+        scenarioLink:'https://tamagodx1414.booth.pm/items/3421386',
+        site:'Booth',
+        PC:'結城真(HO1 重い病を患っている。)',
+        date:'2024/01/14~2024/01/22',
+        comment:'<p>5PLシナリオ初めて！！！めっちゃ楽しかった！！！でもなに言ってもネタバレになりそう。</p><p>所々アニメ映えしそうなシーンあるから時間あったら描きたいな～っていう願望はある、仕事さえなければ……。あと自陣は多分猫ミーム似合うと思うからいつか描いてみたい</p>'
+    },
+    kumoodori:{
+        scenarioImg:'img/scenario/kumoodori-list.webp',
+        title:'火点し頃の蜘蛛踊り',
+        authorKeeper:'作者 りえこ | KP あん',
+        scenarioLink:'https://lie00800.booth.pm/items/434549',
+        site:'Booth',
+        PC:'増田里見(HO2 ジャーナリスト)',
+        date:'2024/02/03~2024/02/15',
+        comment:'<p>気が付くと　涙を流し　蜘蛛踊り　みょさん心の俳句</p><p>蟹踊り自陣みんなかわいかったぞ～～～～～^（なお心に残る傷えぐめ）</p>'
     }
 }

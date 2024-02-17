@@ -36,7 +36,7 @@
     <script src="js/data/scenario.js" defer></script>
     <script src="js/data/loadingScreen.js" defer></script>
 
-    <script src="js/script.min.js" defer></script>
+    <script src="js/script.js" defer></script>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -53,7 +53,7 @@
             <div id="rank">
                 <div>
                     <h3>rank</h3>
-                    <h2>49</h2>
+                    <h2>63</h2>
                 </div>
             </div>
             <div id="statusBar">
@@ -64,7 +64,7 @@
                 <div>
                     <div class="statusEne statusBarCategory">
                         <h3>Ene.</h3>
-                        <h4>10/120</h4>
+                        <h4>5/120</h4>
                     </div>
                     <span class="bar"><span class="energy"></span></span>
                 </div>
@@ -76,7 +76,7 @@
                 <div>
                     <div class="statusGri statusBarCategory">
                         <h3>Gri.</h3>
-                        <h4>155</h4>
+                        <h4>151</h4>
                     </div>
                 </div>
             </div>
@@ -146,6 +146,12 @@
                 <img src="img/scenario/endebi-list.webp" alt="エンジェル・デビル・インプロパー" draggable="false" class="listedScenario" id="endebiListed" data-scenario-name="endebi">
                 <img src="img/scenario/ginrou-list.webp" alt="銀蝋と怪盗団" draggable="false" class="listedScenario" id="ginrouListed" data-scenario-name="ginrou">
                 <img src="img/scenario/niwashi-list.webp" alt="庭師は何を口遊む" draggable="false" class="listedScenario" id="niwashiListed" data-scenario-name="niwashi">
+                <img src="img/scenario/marebito-list.webp" alt="まれびとこぞりて" draggable="false" class="listedScenario" id="marebitoListed" data-scenario-name="marebito">
+                <img src="img/scenario/kushikushi-list.webp" alt="野狗子と薬師" draggable="false" class="listedScenario" id="kushikushiListed" data-scenario-name="kushikushi">
+                <img src="img/scenario/rurupa-list.webp" alt="口渇ルルパ" draggable="false" class="listedScenario" id="rurupaListed" data-scenario-name="rurupa">
+                <img src="img/scenario/GMA-list.webp" alt="Good morning, ALL" draggable="false" class="listedScenario" id="GMAListed" data-scenario-name="GMA">
+                <img src="img/scenario/idyaku-list.webp" alt="イドラの約束" draggable="false" class="listedScenario" id="idyakuListed" data-scenario-name="idyaku">
+                <img src="img/scenario/kumoodori-list.webp" alt="火点し頃の蜘蛛踊り" draggable="false" class="listedScenario" id="kumoodoriListed" data-scenario-name="kumoodori">
             </div>
 
             <div class="dialogBackground">
@@ -271,20 +277,70 @@
                         <h2>Tomori Satoh</h2>
                     </div>
                 </div>
-                <div style="background: #9f7874aa;" class="listedChara" data-character-name="honoka">
+                <div style="background: #d29f9aaa;" class="listedChara" data-character-name="honoka">
                     <img src="img/characters/list/honoka.webp" alt="" draggable="false">
                     <div class="name-system">
                         <h3>CoC</h3>
                         <h2>Honoka Kaibuchi</h2>
                     </div>
                 </div>
-                <div style="background: #735a5aaa;" class="listedChara" data-character-name="haru">
+                <div style="background: #a68282aa;" class="listedChara" data-character-name="haru">
                     <img src="img/characters/list/haru.webp" alt="" draggable="false">
                     <div class="name-system">
                         <h3>CoC</h3>
                         <h2>Haru Uzuki</h2>
                     </div>
                 </div>
+                <div style="background: #735058aa;" class="listedChara" data-character-name="miko">
+                    <img src="img/characters/list/miko.webp" alt="" draggable="false">
+                    <div class="name-system">
+                        <h3>CoC</h3>
+                        <h2>Takumi Mikoshiba</h2>
+                    </div>
+                </div>
+                <div style="background: #DCCE7Caa;" class="listedChara" data-character-name="tobi">
+                    <img src="img/characters/list/tobi.webp" alt="" draggable="false">
+                    <div class="name-system">
+                        <h3>CoC</h3>
+                        <h2>Tobi</h2>
+                    </div>
+                </div>
+                <div style="background: #aaaaaaaa;" class="listedChara" data-character-name="ria">
+                    <img src="img/characters/list/ria.webp" alt="" draggable="false">
+                    <div class="name-system">
+                        <h3>CoC</h3>
+                        <h2>Ria</h2>
+                    </div>
+                </div>
+                <div style="background: #BBA786aa;" class="listedChara" data-character-name="makoto">
+                    <img src="img/characters/list/makoto.webp" alt="" draggable="false">
+                    <div class="name-system">
+                        <h3>CoC</h3>
+                        <h2>Makoto Yuishiro</h2>
+                    </div>
+                </div>
+                <div style="background: #8C61AAaa;" class="listedChara" data-character-name="yuuki">
+                    <img src="img/characters/list/yuuki.webp" alt="" draggable="false">
+                    <div class="name-system">
+                        <h3>CoC</h3>
+                        <h2>Yuki Hanyu</h2>
+                    </div>
+                </div>
+                <div style="background: #795548aa;" class="listedChara" data-character-name="higuchi">
+                    <img src="img/characters/list/higuchi.webp" alt="" draggable="false">
+                    <div class="name-system">
+                        <h3>CoC</h3>
+                        <h2>Kazuyuki Higuchi</h2>
+                    </div>
+                </div>
+                <div style="background: #464167aa;" class="listedChara" data-character-name="satomi">
+                    <img src="img/characters/list/satomi.webp" alt="" draggable="false">
+                    <div class="name-system">
+                        <h3>CoC</h3>
+                        <h2>Satomi Masuta</h2>
+                    </div>
+                </div>
+
             </div>
 
             
