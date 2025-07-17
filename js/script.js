@@ -127,7 +127,7 @@ const characterHandleOnMove = e =>{
 
     const characterPercentage = (mouseDelta/maxDelta)*-100;
     const newcharacterPercentageTemp =parseFloat(characterTrack.dataset.characterPrevPercentage)+characterPercentage;
-    const newcharacterPercentage=Math.max(Math.min(newcharacterPercentageTemp,-.8),-78.5);
+    const newcharacterPercentage=Math.max(Math.min(newcharacterPercentageTemp,-.8),-83.5);
     characterTrack.dataset.characterPercentage = newcharacterPercentage;
 
     characterTrack.style.transform =`translate(${newcharacterPercentage}%,-50%)`
@@ -190,6 +190,8 @@ document.querySelectorAll('.listedChara').forEach((div)=>{
             case 'multiple':
                 document.getElementById('characterStatistic').innerHTML=emoklore+'<br>'+CoC6th
                 break;
+            case 'FFXIVTTRPG':
+                document.getElementById('characterStatistic').innerHTML='';
         }
     })
 })

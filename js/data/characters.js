@@ -80,7 +80,7 @@ const characters ={
         topPageImage:'img/characters/toppage/kaimi.webp',
         fullImage:'img/characters/full/kaimi.webp',
         comment:'<p>目つきが悪い、笑うの下手であんまり笑わないけど営業スマイルはできる。<br>ファミレス好んで食べる、高い店の良さ食べてもあんまりわからない。これまでもかってくらい酒よわい。<br>最近猫飼い始めた</p>',
-        scenario:'<ul><li>かいぶつたちとマホラカルト</li><li>ぷれぜん・あ・てんしょん</li><li>Call The Name of Your Fate</li><li>キスせえ</li><li>なんかぽこぽこハートが出てくるんだけど！？</li><li>君の唾液で中毒になりたい</li><li>ステュディオーロに座るのは</li><li>今宵、貴方は私の獲物</li><li>AND/HAND</li><li>とかく幼児化したKPCが探索者を困らせる話</li><li>暑と寒</li></ul>'
+        scenario:'<ul><li>かいぶつたちとマホラカルト</li><li>Call The Name of Your Fate</li><li>AND/HAND</li></ul>'
     },
     nozomu:{
         name:'九望',
@@ -100,7 +100,7 @@ const characters ={
         topPageImage:'img/characters/toppage/nozomu.webp',
         fullImage:'img/characters/full/nozomu.webp',
         comment:'<p>ふわっふわのふわっふわな雰囲気してる、愛情表現がすごくオープン。<br>本を読みながらコーヒーを飲むのは彼にとって最高の休日、酒そこそこ強い。</p>',
-        scenario:'<ul><li>来世で会おう</li><li>キスせえ</li><li>四畳半のアクアリウム</li><li>君のためのヒポクリシー</li><li>まよなかあくじ</li><li>俺たちはリア充じゃないから爆発しない</li></ul>'
+        scenario:'<ul><li>来世で会おう</li></ul>'
     },
     aya:{
         name:'柏葉彩',
@@ -140,7 +140,7 @@ const characters ={
         topPageImage:'img/characters/toppage/suzu.webp',
         fullImage:'img/characters/full/suzu.webp',
         comment:'<p>いつか自分のお店ほしいなのでいま頑張ってます。<br>雨宮さんの事務所の下の階にあるカフェで働いてる、紅茶を淹れるのも飲むもの好き。</p>',
-        scenario:'<ul><li>同居人</li><li>ごぜんにじにあいにきて</li><li>キスせえ</li><li>福綏たれ</li><li>ステュディオーロに座るのは</li><li>波が立つから、淡いまま・</li></ul>'
+        scenario:'<ul><li>同居人</li></ul>'
     },
     gen:{
         name:'淀繩原',
@@ -220,7 +220,7 @@ const characters ={
         topPageImage:'img/characters/toppage/megumi.webp',
         fullImage:'img/characters/full/megumi.webp',
         comment:'<p>いつも飴を持ち歩いてる、そしてよく飴を人の口に突っ込む。<br>手先が器用でぬいぐるみ作れる。</p>',
-        scenario:'<ul><li>アイラスの双眼</li><li>デュラハニズム・キス</li></ul>'
+        scenario:'<ul><li>アイラスの双眼</li></ul>'
     },
     yuito:{
         name:'和泉結人',
@@ -240,7 +240,7 @@ const characters ={
         topPageImage:'img/characters/toppage/yuito.webp',
         fullImage:'img/characters/full/yuito.webp',
         comment:'<p>人と喋るとき敬語を使う事が多いが、プライベートでは普通に口調荒め。目つきが悪すぎて子供泣かせる。<br>めっちゃ酒強い。</p>',
-        scenario:'<ul><li>MOON GIFTED</li><li>ジャルダン・マルスより、</li><li>楽園藪谷合戦城</li><li>HO1の達人</li><li>ワンルーム・ディスコン</li></ul>'
+        scenario:'<ul><li>MOON GIFTED</li><li>楽園藪谷合戦城</li><li>HO1の達人</li><li>ワンルーム・ディスコン</li></ul>'
     },
     oto:{
         name:'白波瀬緒翔',
@@ -300,7 +300,7 @@ const characters ={
         topPageImage:'img/characters/toppage/honoka.webp',
         fullImage:'img/characters/full/honoka.webp',
         comment:'<p>時計屋も探偵事務所もそこそこ暇で<br>「今日は人来ないでしょ！」って謎の自信が持つことある。<br>よく∪berEats頼む、辛いもの好き。</p>',
-        scenario:'<ul><li>SMILE KILLER</li><li>とかく幼児化したKPCが探索者を困らせる話</li></ul>'
+        scenario:'<ul><li>SMILE KILLER</li></ul>'
     },
     haru:{
         name:'卯月榛',
@@ -440,7 +440,7 @@ const characters ={
         topPageImage:'img/characters/toppage/higuchi.webp',
         fullImage:'img/characters/full/higuchi.webp',
         comment:'<p>淡々としてる。喫煙者。仕事以外の時間ほぼ釣りやキャンプに行く途中かそれやってる最中。</p>',
-        scenario:'<ul><li>まれびとこぞりて</li><li>俺なんかヤっちゃいました？</li><li>キスせえ</li><li>林檎、おひとつどうぞ</li></ul>'
+        scenario:'<ul><li>まれびとこぞりて</li>/ul>'
     },
     satomi:{
         name:'増田里見',
@@ -461,5 +461,137 @@ const characters ={
         fullImage:'img/characters/full/satomi.webp',
         comment:'<p>食いしん坊。八肢島行く前に、八肢ってカニの可能性もあるかもしれないって思ってるから、実は特産がカニなのかなという期待を心に秘めてた。SCPとかオカルト系の物好き。</p>',
         scenario:'<ul><li>火点し頃の蜘蛛踊り</li></ul>'
+    },
+    watari:{
+        name:'喜多見亙',
+        ruby:'きたみわたり',
+        job:'極道',
+        age:'30',
+        dialog:'これで良し。',
+        system:'CoC6th',
+        STR:18,
+        CON:14,
+        POW:15,
+        DEX:18,
+        APP:9,
+        SIZ:13,
+        INT:9,
+        EDU:15,
+        topPageImage:'img/characters/toppage/watari.webp',
+        fullImage:'img/characters/full/watari.webp',
+        comment:'<p>極道。犬猿の落語家の落語強制に聞かされるかもしれないしないかもしれない。よく口喧嘩してる。</p>',
+        scenario:'<ul><li>ロトカ・ヴォルテラの愛堕討ち</li><li>演目「楼牢蝋」</li><li>ラプラスの遺言</li></ul>'
+    },
+    mituki:{
+        name:'酒井光紀',
+        ruby:'さかいみつき',
+        job:'学生',
+        age:'18',
+        dialog:'早く家に帰らなきゃ',
+        system:'CoC6th',
+        STR:7,
+        CON:10,
+        POW:17,
+        DEX:8,
+        APP:13,
+        SIZ:15,
+        INT:17,
+        EDU:11,
+        topPageImage:'img/characters/toppage/mituki.webp',
+        fullImage:'img/characters/full/mituki.webp',
+        comment:'<p>高校生。ケーキ屋でバイトしてる、よく店長の言葉に甘えてショートケーキとチーズケーキを持ち帰ったりする</p>',
+        scenario:'<ul><li>光彩奪目</li></ul>'
+    },
+    karl:{
+        name:'Karl Eisan',
+        ruby:'カールアイサン',
+        job:'学生',
+        age:20,
+        dialog:'この単語はこれで……えーっと……',
+        system:'emoklore',
+        physic:2,
+        clever:3,
+        mental:3,
+        sense:4,
+        wisdom:5,
+        charm:4,
+        social:4,
+        luck:3,
+        topPageImage:'img/characters/toppage/karl.webp',
+        fullImage:'img/characters/full/karl.webp',
+        comment:'<p>イギリスの寄宿学校に来たドイツ人<br>外国人だし言語もちゃんと勉強してて、やっとその文化に直接触れるのワクワクしてる</p>',
+        scenario:'<ul><li>SUlCiDE</li></ul>'
+    },
+    momo:{
+        name:'槐百汰',
+        ruby:'えんじゅももた',
+        job:'高校生',
+        age:'17',
+        dialog:'オレは本より重い物持てないですのでお願いしますね。',
+        system:'CoC6th',
+        STR:8,
+        CON:13,
+        POW:13,
+        DEX:10,
+        APP:14,
+        SIZ:18,
+        INT:14,
+        EDU:14,
+        topPageImage:'img/characters/toppage/momo.webp',
+        fullImage:'img/characters/full/momo.webp',
+        comment:'<p>あんまりにも力がないがハードカバーの分厚い本は持てる</p>',
+        scenario:'<ul><li>クアドラコーン</li></ul>'
+    },
+    sasha:{
+        name:'Sascha Arena',
+        ruby:'サーシャアリーナ',
+        job:'黒魔導士',
+        age:'22',
+        dialog:'よっしゃ！一丁あがり～酒場いこ酒場～',
+        system:'FFXIVTTRPG',
+        topPageImage:'img/characters/toppage/sasha.webp',
+        fullImage:'img/characters/full/sasha.webp',
+        comment:'<p>勲章貴金属じゃらじゃらハイランダー黒魔ネキ<br>難民出身、金もなくまともに飯食べれなく、ザル神が治める死後の世界はもう二度と腹を減る事なくと聞いて、アルダネス聖櫃堂に向かう途中でクイックサンドの前にぶっ倒れた事がある。</p>',
+        scenario:'<ul><li>魔獣使いの笛</li></ul>'
+    },
+    natumi:{
+        name:'白井夏巳',
+        ruby:'しらいなつみ',
+        job:'刑事',
+        age:'31',
+        dialog:'ええ～？それは俺の綺麗な顔免じてちょっと融通……え？だめ？しゃーないなぁ～',
+        system:'CoC6th',
+        STR:11,
+        CON:10,
+        POW:13,
+        DEX:13,
+        APP:15,
+        SIZ:13,
+        INT:13,
+        EDU:18,
+        topPageImage:'img/characters/toppage/natumi.webp',
+        fullImage:'img/characters/full/natumi.webp',
+        comment:'<p>そこそこ頑張って勉強してるけど頭そんな柔らかくないし鈍感。顔の良さにまあ自覚はある。<br>甘党で肌寒くなったら片手ホットココアで手を暖めながらベンチだったり手すりだったりに体重掛けてぼーって空見てる。</p>',
+        scenario:'<ul><li>McGuffin</li></ul>'
+    },
+    elio:{
+        name:'Elio Lupino',
+        ruby:'エリオルピノ',
+        job:'マフィア',
+        age:'34',
+        dialog:'俺に依頼するとそれなりの代償支払ってもらうぜ？',
+        system:'CoC6th',
+        STR:15,
+        CON:17,
+        POW:18,
+        DEX:10,
+        APP:9,
+        SIZ:15,
+        INT:15,
+        EDU:12,
+        topPageImage:'img/characters/toppage/elio.webp',
+        fullImage:'img/characters/full/elio.webp',
+        comment:'<p>用心棒、賭博や歓楽街あたりの手配、運営をやってるかもしれない。歓楽街で結構情報手に入れるからそこの人たちを結構大事にしてる。<br>身内にそんなに厳しくない、甘め。逆に身内じゃない人はどうでもいいらしい。</p>',
+        scenario:'<ul><li>ニケとアヌビス</li></ul>'
     }
 }
